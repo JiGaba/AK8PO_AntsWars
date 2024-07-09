@@ -1,0 +1,266 @@
+[gd_scene load_steps=33 format=3 uid="uid://cmr11qyskcbsg"]
+
+[ext_resource type="Texture2D" uid="uid://c85506v6ivkmy" path="res://images/background_blur.png" id="1_2sh17"]
+[ext_resource type="Script" path="res://Control.cs" id="2_p7kli"]
+[ext_resource type="Script" path="res://ControlLabel.cs" id="3_exw8p"]
+[ext_resource type="Script" path="res://ControlWall.cs" id="4_5x383"]
+[ext_resource type="Texture2D" uid="uid://bo37u71s60oay" path="res://images/card_back.png" id="4_hg7b3"]
+[ext_resource type="Script" path="res://ControlCastle.cs" id="5_o5eu0"]
+[ext_resource type="Script" path="res://ControlCards.cs" id="6_3n4hb"]
+[ext_resource type="Script" path="res://CardBack.cs" id="9_366ew"]
+[ext_resource type="Script" path="res://Card1.cs" id="11_dqfbw"]
+[ext_resource type="Script" path="res://BlackCastle.cs" id="11_q1i08"]
+[ext_resource type="Script" path="res://Card2.cs" id="12_af1q2"]
+[ext_resource type="Script" path="res://RedCastle.cs" id="12_smq72"]
+[ext_resource type="Script" path="res://BlackWall.cs" id="13_dtxwm"]
+[ext_resource type="Script" path="res://Card3.cs" id="13_xp0ba"]
+[ext_resource type="Script" path="res://Card4.cs" id="14_2pxti"]
+[ext_resource type="Script" path="res://RedWall.cs" id="14_nu6h6"]
+[ext_resource type="Script" path="res://Card5.cs" id="15_escxr"]
+[ext_resource type="Script" path="res://Card6.cs" id="16_aykjp"]
+[ext_resource type="Texture2D" uid="uid://bh151qmr44pxe" path="res://images/castle_black_full.png" id="17_3en87"]
+[ext_resource type="Script" path="res://Card7.cs" id="17_23smb"]
+[ext_resource type="Script" path="res://Card8.cs" id="19_b0f1c"]
+[ext_resource type="Texture2D" uid="uid://cwyopt7pnudrf" path="res://images/castle_red_full.png" id="19_yq1mm"]
+[ext_resource type="Texture2D" uid="uid://x27akhdho2wk" path="res://images/weapons_icon.png" id="21_kkiki"]
+[ext_resource type="Texture2D" uid="uid://da5ybdrxfyp6m" path="res://images/wall_5.png" id="21_rs4ec"]
+[ext_resource type="Texture2D" uid="uid://bxk333adxyed4" path="res://images/stone_icon.png" id="22_rxqbq"]
+[ext_resource type="Texture2D" uid="uid://bw5c87atplues" path="res://images/magic_icon.png" id="23_tdf2r"]
+[ext_resource type="Texture2D" uid="uid://b8oexxkyn36re" path="res://images/castle_black_icon.png" id="27_4hwuq"]
+[ext_resource type="Texture2D" uid="uid://bss831h5l2vhh" path="res://images/castle_red_icon.png" id="28_67432"]
+[ext_resource type="Texture2D" uid="uid://kwxmbeqfdu6u" path="res://images/wall_icon.png" id="29_uqt7t"]
+[ext_resource type="Texture2D" uid="uid://dp7dgqb5mhn3b" path="res://images/button_new_game.png" id="30_0v6h6"]
+[ext_resource type="Texture2D" uid="uid://dp8el0qkekd4c" path="res://images/win_red.png" id="31_ifcbd"]
+[ext_resource type="Script" path="res://VictoryBanner.cs" id="32_ltrxp"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(683, 452)
+texture = ExtResource("1_2sh17")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_p7kli")
+
+[node name="ControlLabel" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_exw8p")
+
+[node name="ControlWall" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_5x383")
+
+[node name="ControlCastle" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_o5eu0")
+
+[node name="ControlCards" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_3n4hb")
+
+[node name="BlackWeaponsLabel" type="Label" parent="."]
+offset_left = 71.0
+offset_top = 21.0
+offset_right = 111.0
+offset_bottom = 44.0
+text = "0"
+
+[node name="BlackStoneLabel" type="Label" parent="."]
+offset_left = 72.0
+offset_top = 72.0
+offset_right = 112.0
+offset_bottom = 95.0
+text = "0"
+
+[node name="BlackMagicLabel" type="Label" parent="."]
+offset_left = 74.0
+offset_top = 117.0
+offset_right = 126.0
+offset_bottom = 144.0
+pivot_offset = Vector2(1, 1)
+text = "0"
+
+[node name="RedWeaponsLabel" type="Label" parent="."]
+offset_left = 1169.0
+offset_top = 21.0
+offset_right = 1209.0
+offset_bottom = 44.0
+text = "0"
+horizontal_alignment = 2
+
+[node name="RedStoneLabel" type="Label" parent="."]
+offset_left = 1168.0
+offset_top = 66.0
+offset_right = 1208.0
+offset_bottom = 89.0
+text = "0"
+horizontal_alignment = 2
+
+[node name="RedMagicLabel" type="Label" parent="."]
+offset_left = 1169.0
+offset_top = 116.0
+offset_right = 1209.0
+offset_bottom = 139.0
+text = "0"
+horizontal_alignment = 2
+
+[node name="BlackCastleLabel" type="Label" parent="."]
+offset_left = 75.0
+offset_top = 169.0
+offset_right = 115.0
+offset_bottom = 192.0
+text = "0"
+
+[node name="BlackWallLabel" type="Label" parent="."]
+offset_left = 76.0
+offset_top = 214.0
+offset_right = 116.0
+offset_bottom = 237.0
+text = "0"
+
+[node name="RedCastleLabel" type="Label" parent="."]
+offset_left = 1166.0
+offset_top = 168.0
+offset_right = 1206.0
+offset_bottom = 191.0
+text = "0"
+horizontal_alignment = 2
+
+[node name="RedWallLabel" type="Label" parent="."]
+offset_left = 1166.0
+offset_top = 216.0
+offset_right = 1206.0
+offset_bottom = 239.0
+text = "0"
+horizontal_alignment = 2
+
+[node name="CardBack" type="Sprite2D" parent="."]
+position = Vector2(643, 117)
+texture = ExtResource("4_hg7b3")
+script = ExtResource("9_366ew")
+
+[node name="Card1" type="Sprite2D" parent="."]
+position = Vector2(80, 780)
+texture = ExtResource("4_hg7b3")
+script = ExtResource("11_dqfbw")
+
+[node name="Card2" type="Sprite2D" parent="."]
+position = Vector2(220, 781)
+texture = ExtResource("4_hg7b3")
+script = ExtResource("12_af1q2")
+
+[node name="Card3" type="Sprite2D" parent="."]
+position = Vector2(360, 782)
+texture = ExtResource("4_hg7b3")
+script = ExtResource("13_xp0ba")
+
+[node name="Card4" type="Sprite2D" parent="."]
+position = Vector2(500, 781)
+texture = ExtResource("4_hg7b3")
+script = ExtResource("14_2pxti")
+
+[node name="Card5" type="Sprite2D" parent="."]
+position = Vector2(782, 782)
+texture = ExtResource("4_hg7b3")
+script = ExtResource("15_escxr")
+
+[node name="Card6" type="Sprite2D" parent="."]
+position = Vector2(919, 782)
+texture = ExtResource("4_hg7b3")
+script = ExtResource("16_aykjp")
+
+[node name="Card7" type="Sprite2D" parent="."]
+position = Vector2(1057, 782)
+texture = ExtResource("4_hg7b3")
+script = ExtResource("17_23smb")
+
+[node name="Card8" type="Sprite2D" parent="."]
+position = Vector2(1199, 784)
+scale = Vector2(1.02756, 1.0237)
+texture = ExtResource("4_hg7b3")
+script = ExtResource("19_b0f1c")
+
+[node name="BlackCastle" type="Sprite2D" parent="."]
+position = Vector2(144, 467)
+texture = ExtResource("17_3en87")
+script = ExtResource("11_q1i08")
+
+[node name="RedCastle" type="Sprite2D" parent="."]
+position = Vector2(1139, 461)
+texture = ExtResource("19_yq1mm")
+script = ExtResource("12_smq72")
+
+[node name="BlackWall" type="Sprite2D" parent="."]
+position = Vector2(373, 471)
+texture = ExtResource("21_rs4ec")
+script = ExtResource("13_dtxwm")
+
+[node name="RedWall" type="Sprite2D" parent="."]
+position = Vector2(915, 477)
+texture = ExtResource("21_rs4ec")
+script = ExtResource("14_nu6h6")
+
+[node name="VictoryBanner" type="Sprite2D" parent="."]
+position = Vector2(653, 463)
+texture = ExtResource("31_ifcbd")
+script = ExtResource("32_ltrxp")
+
+[node name="Weapons_black_icon" type="Sprite2D" parent="."]
+position = Vector2(33, 34)
+texture = ExtResource("21_kkiki")
+
+[node name="Weapons_red_icon" type="Sprite2D" parent="."]
+position = Vector2(1250, 31)
+texture = ExtResource("21_kkiki")
+
+[node name="Stone_black_icon" type="Sprite2D" parent="."]
+position = Vector2(33, 85)
+texture = ExtResource("22_rxqbq")
+
+[node name="Stone_red_icon" type="Sprite2D" parent="."]
+position = Vector2(1247, 78)
+texture = ExtResource("22_rxqbq")
+
+[node name="Magic_black_icon" type="Sprite2D" parent="."]
+position = Vector2(32, 129)
+texture = ExtResource("23_tdf2r")
+
+[node name="Magic_red_icon" type="Sprite2D" parent="."]
+position = Vector2(1246, 125)
+texture = ExtResource("23_tdf2r")
+
+[node name="Castle_black_icon" type="Sprite2D" parent="."]
+position = Vector2(34, 178)
+texture = ExtResource("27_4hwuq")
+
+[node name="Castle_red_icon" type="Sprite2D" parent="."]
+position = Vector2(1249, 177)
+texture = ExtResource("28_67432")
+
+[node name="Wall_black_icon" type="Sprite2D" parent="."]
+position = Vector2(35, 227)
+texture = ExtResource("29_uqt7t")
+
+[node name="Wall_red_icon" type="Sprite2D" parent="."]
+position = Vector2(1247, 224)
+texture = ExtResource("29_uqt7t")
+
+[node name="StartButton" type="Sprite2D" parent="."]
+position = Vector2(640, 781)
+texture = ExtResource("30_0v6h6")
